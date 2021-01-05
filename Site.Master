@@ -1,0 +1,57 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="BrainSite.Site" %>
+
+<!DOCTYPE html>
+
+
+<html>
+<link rel="stylesheet" href="style.css" />
+
+<head runat="server">
+    <style>
+        img{
+            max-width:35%;
+            height:auto;
+            
+
+        }
+    </style>
+    <!--on the top right of the screen should be a logout botton and on the top left should be the logo of my site-->
+   
+   
+   <!-------------------------------------------------->
+    <!--the menue of the webpage-->
+    <ul>
+   <li><img src="\images\AwsomeLogo.png" alt="Girl in a jacket"></li>
+  <li><a class="active" href="\HomePG.aspx">Home</a></li>
+  <li><a href="\NewPg.aspx">New</a></li>
+  <li><a href="\historyPg.aspx">History</a></li>
+  <li><a href="\ContactPg">Contact</a></li>
+  <li style="float:right"><a href="#about">logout</a></li>
+    </ul>
+    <!---------------------------------------------->
+    
+    <asp:ContentPlaceHolder ID="mphead" runat="server">
+        
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <table>
+        <tr>
+            <td>
+                <!-- the center og the page, main contect-->
+            <asp:ContentPlaceHolder ID="center" runat="server">
+            </asp:ContentPlaceHolder>
+                <!------------------------------------------->
+            </td>
+          </tr>
+         <tr style="position:botttom">
+            <td>
+                <!-- the center og the page, main contect-->
+            <asp:ContentPlaceHolder ID="explanation" runat="server">
+            </asp:ContentPlaceHolder>
+                <!------------------------------------------->
+            </td>
+          </tr>
+      </table>
+</body>
+</html>
